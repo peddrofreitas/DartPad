@@ -1,0 +1,56 @@
+class Livro {
+  // Atributos da classe
+  String nome;
+  String autor;
+  String editora;
+  double preco;
+  String genero;
+  double precofabricacao;
+  String sinopse;
+  String sumario;
+   
+  // Construtor da classe
+  Livro(this.nome, this.autor, this.editora, this.preco, this.genero, this.precofabricacao, this.sinopse, this.sumario);
+  // Método para exibir informações do aluno
+
+  void exibirInformacoes() {
+
+    print("Título: $nome");
+
+    print("Autor: $autor");
+
+    print("Preço: ${preco.toStringAsFixed(2)}");
+
+    print("Preço de Custo: ${precofabricacao.toStringAsFixed(2)}");
+
+  }
+
+
+  // Método para calcular a média das notas
+
+  double calcularlucro() {
+
+    return (preco - precofabricacao);
+
+  }
+ void exibirMediaFormatada() {
+
+    print("Lucro: ${calcularlucro().toStringAsFixed(2)}");
+
+  }
+
+}
+
+
+
+void main() {
+  // Criando objetos da classe Aluno
+  var livro1 = Livro("Harry Potter","J.k Rolling","Turma", 50.00,"ficção",25.00,"sinopse","sumario");
+
+  // Usando métodos dos objetos
+  livro1.exibirInformacoes();
+  livro1.calcularlucro();
+  livro1.exibirMediaFormatada();
+  print("");
+
+}
